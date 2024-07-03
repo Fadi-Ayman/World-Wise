@@ -1,0 +1,58 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav :global(.navImage) {
+  width: clamp(13rem,15vw,40rem);
+  height: 100%;
+  padding-top: 1.5rem;
+  order: 1 !important
+
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap:clamp( 1rem ,3vw,5rem);
+  order: 2 !important;
+}
+
+.nav li{
+  padding-top: .7rem;
+}
+
+.nav a:link,
+.nav a:visited {
+  text-decoration: none;
+  color: var(--color-light--2);
+  text-transform: uppercase;
+  font-size: clamp(10px,2vw,1.9rem);
+  font-weight: 600;
+}
+
+.nav a:link:hover,
+.nav a:visited:hover{
+  opacity: .8;
+}
+
+/* CSS Modules feature */
+.nav a:global(.active) {
+  color: var(--color-brand--2);
+}
+
+a.ctaLink:link,
+a.ctaLink:visited {
+  background-color: var(--color-brand--2);
+  color: var(--color-dark--0);
+  padding: 0.8rem 2rem;
+  border-radius: 7px;
+}
+
+
+.nav a.loginLink:global(.active){
+  color: var(--color-light--3);
+}
+

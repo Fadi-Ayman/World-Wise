@@ -1,0 +1,49 @@
+.login {
+  padding: 2.5rem 5rem;
+  background-color: var(--color-dark--1);
+  height: 100vh;
+}
+
+.form {
+  background-color: var(--color-dark--2);
+  border-radius: 7px;
+  padding: 2rem 3rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  
+  /* Different from other form */
+  width: 42%;
+  margin: 10rem auto;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form .btnLogin{
+  color: white  ;
+  padding: 1.1rem;
+  border: none;
+  font-weight: 600;
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.form .btnLogin:hover{
+  opacity: .8;
+}
+
+@media (max-width:500px){
+  .login {
+    padding: 1.25rem 2.5rem;
+  }
+  .form {
+    margin: 10rem auto;
+    width: 100%;
+  }
+}
