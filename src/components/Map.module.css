@@ -9,6 +9,22 @@
   height: 100%;
 }
 
+.mapBtn{
+  position: absolute !important ;
+  z-index: 999;
+  left: 47%;
+  bottom: 5%;
+  cursor: pointer;
+  padding: 1.3rem !important;
+  border: none;
+  color: white !important ;
+  transition-duration: .2s;
+}
+
+.mapBtn:hover{
+  transform: scale(1.05,1.05);
+}
+
 :global(.leaflet-popup .leaflet-popup-content-wrapper) {
   background-color: var(--color-dark--1);
   color: var(--color-light--2);
@@ -35,3 +51,5 @@
 :global(.leaflet-popup-content-wrapper) {
   border-left: 5px solid var(--color-brand--2);
 }
+
+

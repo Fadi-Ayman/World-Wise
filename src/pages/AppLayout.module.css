@@ -4,4 +4,13 @@
   overscroll-behavior-y: none;
   display: flex;
   position: relative;
+  flex-direction: row;
 }
+
+
+/* @media (max-width:560px){
+  .app {
+    flex-direction: column-reverse;
+  }
+  
+} */

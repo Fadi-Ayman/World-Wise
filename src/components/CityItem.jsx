@@ -12,7 +12,7 @@ function CityItem({emoji,name,date,id,position}) {
 
   return (
     <Link to={`/applayout/city/${id}?lat=${lat}&lng=${lng}`} className={styles.cityItem}>
-      <span className={styles.emoji}>{convertToEmoji(emoji)}</span>
+      <span className={styles.emoji}>{emoji}</span>
       <p className={styles.name}>{name}</p>
       <p className={styles.date}>{formatDate(date)}</p>
       <button onClick={(e)=>{

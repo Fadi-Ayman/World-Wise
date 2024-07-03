@@ -6,7 +6,7 @@ function Sidebar() {
   
   return (
     <aside className={styles.sidebar}>
-      <Link to='/' > <img src="../../public/logo.png" alt="Logo" /> </Link>
+      <Link to='/' > <img src="/logo.png" alt="Logo" /> </Link>
       <AppNav />
       <Outlet/>
       <footer className={styles.footer}>

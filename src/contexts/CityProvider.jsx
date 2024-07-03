@@ -16,6 +16,9 @@ function CityProvider({ children }) {
   const [isCurrentCityError, setIsCurrentCityError] = useState(false);
   const [position,setPosition] = useState(initialPositoin)
 
+
+
+
   
   useEffect(() => {
     async function getCities() {
@@ -71,7 +74,7 @@ function CityProvider({ children }) {
         isCurrentCityLoading,
         isCurrentCityError,
         position,
-        setPosition
+        setPosition,
       }}
     >
       {children}

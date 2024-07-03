@@ -12,8 +12,6 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  
-  /* Different from other form */
   width: 42%;
   margin: 10rem auto;
 }
@@ -38,7 +36,7 @@
   opacity: .8;
 }
 
-@media (max-width:500px){
+@media (max-width:560px){
   .login {
     padding: 1.25rem 2.5rem;
   }

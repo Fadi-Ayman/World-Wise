@@ -5,7 +5,7 @@ function PageNav() {
   return (
     <nav className={styles.nav}>
       <div>
-        <Link to="/"> <img className="navImage" src="../../public/logo.png" alt="Logo" /></Link>
+        <Link to="/"> <img className="navImage" src="/logo.png" alt="Logo" /></Link>
       </div>
       <ul>
         <li>

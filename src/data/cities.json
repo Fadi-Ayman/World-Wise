@@ -3,8 +3,8 @@
     {
       "cityName": "Lisbon",
       "country": "Portugal",
-      "emoji": "PT",
-      "date": "2024-07-02T20:22:59.824Z",
+      "emoji": "🇵🇹",
+      "date": "2027-10-31T15:59:59.138Z",
       "notes": "My favorite city so far!",
       "position": {
         "lat": 38.727881642324164,
@@ -15,8 +15,8 @@
     {
       "cityName": "Madrid",
       "country": "Spain",
-      "emoji": "ES",
-      "date": "2024-07-27T20:22:59.824Z",
+      "emoji": "🇪🇸",
+      "date": "2027-07-15T08:22:53.976Z",
       "notes": "",
       "position": {
         "lat": 40.46635901755316,
@@ -27,8 +27,8 @@
     {
       "cityName": "Berlin",
       "country": "Germany",
-      "emoji": "DE",
-      "date": "2024-08-20T20:22:59.824Z",
+      "emoji": "🇩🇪",
+      "date": "2027-02-12T09:24:11.863Z",
       "notes": "Amazing 😃",
       "position": {
         "lat": 52.53586782505711,
@@ -37,63 +37,27 @@
       "id": "98443197"
     },
     {
-      "id": "0014",
-      "cityName": "Karlsruhe",
-      "country": "Germany",
-      "emoji": "DE",
-      "date": "2024-07-02T21:00:40.156Z",
-      "notes": "No Notes",
-      "position": {
-        "lat": "49.051393805906386",
-        "lng": "8.309291943950573"
-      }
-    },
-    {
-      "id": "1025",
-      "cityName": "Warpe",
-      "country": "Germany",
-      "emoji": "DE",
-      "date": "2024-07-02T21:02:56.885Z",
-      "notes": "No Notes",
-      "position": {
-        "lat": "52.735423162551506",
-        "lng": "9.059509021006301"
-      }
-    },
-    {
-      "id": "fc05",
-      "cityName": "Tullamore",
+      "id": "168d",
+      "cityName": "Ballinasloe",
       "country": "Ireland",
-      "emoji": "IE",
-      "date": "2024-07-02T21:12:08.791Z",
+      "emoji": "🇮🇪",
+      "date": "2024-07-03T18:15:16.114Z",
       "notes": "No Notes",
       "position": {
-        "lat": "53.35845396298286",
-        "lng": "-7.6670331853043345"
+        "lat": "53.32933272946502",
+        "lng": "-8.304428762364498"
       }
     },
     {
-      "id": "6f36",
-      "cityName": "Nuneaton",
-      "country": "United Kingdom",
-      "emoji": "GB",
-      "date": "2024-07-02T21:59:09.822Z",
+      "id": "6cbc",
+      "cityName": "Bilibino",
+      "country": "Russian Federation (the)",
+      "emoji": "🇷🇺",
+      "date": "2024-07-03T19:52:43.696Z",
       "notes": "No Notes",
       "position": {
-        "lat": "52.53567171929094",
-        "lng": "-1.424952361680734"
-      }
-    },
-    {
-      "id": "f263",
-      "cityName": "Etton",
-      "country": "United Kingdom",
-      "emoji": "GB",
-      "date": "2024-07-03T14:50:12.611Z",
-      "notes": "No Notes",
-      "position": {
-        "lat": "53.87763662039853",
-        "lng": "-0.5702470799954208"
+        "lat": "65.47931882402774",
+        "lng": "163.5007743826559"
       }
     }
   ]

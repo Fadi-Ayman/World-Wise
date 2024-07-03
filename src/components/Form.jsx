@@ -30,13 +30,13 @@ function Form() {
   const notesRef = useRef(null)
   const navigate = useNavigate()
   const {cities , setCities} = useCities()
+  const [isGeoCodingError,setIsGeoCodingError] = useState(false)
 
   const [cityName, setCityName] = useState("");
   const [emoji, setEmoji] = useState("");
   const [date, setDate] = useState(new Date());
   const [notes, setNotes] = useState("");
   const [cityToAdd, SetCityToAdd] = useState("");
-  const [isGeoCodingError,setIsGeoCodingError] = useState(false)
   
   useEffect(() => {
     async function ReverseGeocoding() {
@@ -44,7 +44,7 @@ function Form() {
         const res = await fetch(GEO_CODING_BASE_URL);
         const data = await res.json();
         let { city: cityName, countryName: country, countryCode :emoji } = data;
-        if(!country){
+        if(!country || !cityName){
           setIsGeoCodingError(true)
           return
         }else if (country === 'United Kingdom of Great Britain and Northern Ireland (the)'){
@@ -52,13 +52,11 @@ function Form() {
         }
         setCityName(cityName);
         setEmoji(convertToEmoji(emoji));
-        console.log(data)
-
 
         SetCityToAdd(JSON.stringify({
           cityName: cityName,
           country: country,
-          emoji: emoji,
+          emoji: convertToEmoji(emoji),
           date: date,
           notes: notes || 'No Notes',
           position: {
@@ -66,6 +64,8 @@ function Form() {
             lng: lng,
           },
         }));
+
+        setIsGeoCodingError(false)
 
       } catch (error) {
         setIsGeoCodingError(true)
@@ -76,11 +76,12 @@ function Form() {
     }
 
     ReverseGeocoding();
-  }, [GEO_CODING_BASE_URL, date, lat, lng]);
+  }, [GEO_CODING_BASE_URL, date, lat, lng ]);
+  // Didn,t Put Notes To Avoid Unnecessary Renders , By The Way It Will Added At Sending Form
 
   useEffect( () =>{
-    notesRef.current.focus()
-  } , [lat,lng] )
+    !isGeoCodingError && notesRef.current.focus()
+  } , [isGeoCodingError, lat, lng] )
 
   async function handleAddBtn(){
     try {
@@ -95,7 +96,7 @@ function Form() {
       const data = await res.json()
       setCities([...cities , data])
 
-      navigate('/applayout/cities')
+      navigate('/applayout/cities' )
     } catch (error) {
       
     }finally{
@@ -107,7 +108,7 @@ function Form() {
     navigate('/applayout/cities')
   }
 
-  if(isGeoCodingError) return <Message message={`Please Make Sure That you have Clicked On A Country , Try To Click In Other Place`} />
+  if(isGeoCodingError) return <Message emoji="🙁" message={`No Country Here , Try To Click In Other Place`} />
 
   return (
     <form onClick={(e)=>{e.preventDefault()}} className={styles.form}>
