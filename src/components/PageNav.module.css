@@ -5,23 +5,22 @@
 }
 
 .nav :global(.navImage) {
-  width: clamp(13rem,15vw,40rem);
+  width: clamp(13rem, 15vw, 40rem);
   height: 100%;
   padding-top: 1.5rem;
-  order: 1 !important
-
+  order: 1 !important;
 }
 
 .nav ul {
   list-style: none;
   display: flex;
   align-items: center;
-  gap:clamp( 1rem ,3vw,5rem);
+  gap: clamp(1rem, 3vw, 5rem);
   order: 2 !important;
 }
 
-.nav li{
-  padding-top: .7rem;
+.nav li {
+  padding-top: 0.7rem;
 }
 
 .nav a:link,
@@ -29,16 +28,15 @@
   text-decoration: none;
   color: var(--color-light--2);
   text-transform: uppercase;
-  font-size: clamp(10px,2vw,1.9rem);
+  font-size: clamp(10px, 2vw, 1.9rem);
   font-weight: 600;
 }
 
 .nav a:link:hover,
-.nav a:visited:hover{
-  opacity: .8;
+.nav a:visited:hover {
+  opacity: 0.8;
 }
 
-/* CSS Modules feature */
 .nav a:global(.active) {
   color: var(--color-brand--2);
 }
@@ -51,8 +49,6 @@ a.ctaLink:visited {
   border-radius: 7px;
 }
 
-
-.nav a.loginLink:global(.active){
+.nav a.loginLink:global(.active) {
   color: var(--color-light--3);
 }
-

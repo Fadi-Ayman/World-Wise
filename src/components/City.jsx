@@ -1,10 +1,9 @@
 import styles from "./City.module.css";
 import { useNavigate, useParams } from "react-router-dom";
-import { useCities } from "../contexts/CityProvider";
-import Spinner from './Spinner'
-import Message from './Message';
+import { useCities } from "../contexts/CityContext";
+import Spinner from "./Spinner";
+import Message from "./Message";
 import { useEffect } from "react";
-import { convertToEmoji } from "./Form";
 
 export const formatDate = (date) =>
   new Intl.DateTimeFormat("en", {
@@ -15,19 +14,23 @@ export const formatDate = (date) =>
   }).format(new Date(date));
 
 function City() {
-  const navigate = useNavigate()
-  const {id} = useParams()
-  const {getCurrentCity,currentCity,isCurrentCityLoading,isCurrentCityError} = useCities() 
+  const navigate = useNavigate();
+  const { id } = useParams();
+  const {
+    getCurrentCity,
+    currentCity,
+    isCurrentCityLoading,
+    isCurrentCityError,
+  } = useCities();
   const { cityName, emoji, date, notes } = currentCity;
 
-  useEffect(()=>{
-    getCurrentCity(id)
-  },[id])
+  useEffect(() => {
+    getCurrentCity(id);
+  }, [id]);
 
-  
-  if (isCurrentCityLoading) return <Spinner/>
-  if (isCurrentCityError) return <Message emoji='😰' message={'Error Occured While Fetching Data'}/>
-
+  if (isCurrentCityLoading) return <Spinner />;
+  if (isCurrentCityError)
+    return <Message emoji="😰" message={"Error Occured While Fetching Data"} />;
 
   return (
     <div className={styles.city}>
@@ -62,7 +65,14 @@ function City() {
       </div>
 
       <div>
-        <button onClick={()=>{navigate(-1)}} className={styles.backBtn}>Back</button>
+        <button
+          onClick={() => {
+            navigate(-1);
+          }}
+          className={styles.backBtn}
+        >
+          Back
+        </button>
       </div>
     </div>
   );

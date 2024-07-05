@@ -2,10 +2,10 @@ import { createContext, useState, useEffect, useContext } from "react";
 const CityContext = createContext();
 const BASE_URL = `http://localhost:8000/cities`;
 
-const initialPositoin = {
-  lat:51.505 ,
-  lng:-0.09
-}
+const initialPosition = {
+  lat: 30.033333,
+  lng: 31.233334,
+};
 
 function CityProvider({ children }) {
   const [cities, setCities] = useState([]);
@@ -14,12 +14,8 @@ function CityProvider({ children }) {
   const [currentCity, setCurrentCity] = useState({});
   const [isCurrentCityLoading, setIsCurrentCityLoading] = useState(false);
   const [isCurrentCityError, setIsCurrentCityError] = useState(false);
-  const [position,setPosition] = useState(initialPositoin)
+  const [position, setPosition] = useState(initialPosition);
 
-
-
-
-  
   useEffect(() => {
     async function getCities() {
       setIsCitiesLoading(true);
@@ -44,9 +40,9 @@ function CityProvider({ children }) {
       const data = await res.json();
       setCurrentCity(data);
     } catch (error) {
-      setIsCurrentCityError(true)
-    }finally{
-      setIsCurrentCityLoading(false)
+      setIsCurrentCityError(true);
+    } finally {
+      setIsCurrentCityLoading(false);
     }
   }
 
@@ -82,7 +78,6 @@ function CityProvider({ children }) {
   );
 }
 
-
 function useCities() {
   const context = useContext(CityContext);
   if (context === undefined)
@@ -90,4 +85,4 @@ function useCities() {
   return context;
 }
 
-export { CityProvider, useCities };
+export { CityProvider, useCities, initialPosition };

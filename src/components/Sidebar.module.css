@@ -11,7 +11,7 @@
 }
 
 .sidebar a img {
-  width: clamp(15rem,3vw,20rem);
+  width: clamp(15rem, 3vw, 20rem);
 }
 
 .footer {
@@ -21,4 +21,18 @@
 .copyright {
   font-size: 1.2rem;
   color: var(--color-light--1);
+}
+
+@media (max-width: 560px) {
+  .sidebar {
+    height: 50vh;
+    flex-grow: 1;
+    border-radius: none;
+    border-bottom-left-radius: 0rem;
+    border-top-left-radius: 0rem;
+    padding: 3rem 5rem 1rem 5rem;
+  }
+  .footer {
+    padding-top: 1rem;
+  }
 }

@@ -22,8 +22,8 @@
   gap: 0.5rem;
 }
 
-.form .btnLogin{
-  color: white  ;
+.form .btnLogin {
+  color: white;
   padding: 1.1rem;
   border: none;
   font-weight: 600;
@@ -32,11 +32,11 @@
   cursor: pointer;
 }
 
-.form .btnLogin:hover{
-  opacity: .8;
+.form .btnLogin:hover {
+  opacity: 0.8;
 }
 
-@media (max-width:560px){
+@media (max-width: 560px) {
   .login {
     padding: 1.25rem 2.5rem;
   }

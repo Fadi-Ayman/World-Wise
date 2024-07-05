@@ -9,7 +9,7 @@
   --color-dark--0: #242a2e;
   --color-dark--1: #2d3439;
   --color-dark--2: #42484d;
-  
+
   --color-light--1: #aaa;
   --color-light--2: #ececec;
   --color-light--3: #d6dee0;
@@ -18,7 +18,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 html {
@@ -64,7 +64,7 @@ input:focus {
   text-decoration: none;
   font-size: 1.6rem;
   font-weight: 600;
-  padding: .9rem 2.6rem;
+  padding: 0.9rem 2.6rem;
   border-radius: 5px;
   font-weight: bold;
 }
@@ -81,36 +81,33 @@ input:focus {
   border-radius: 5px;
 }
 
-
-.react-datepicker{
+.react-datepicker {
   width: 300px;
   font-size: 1.5rem;
-  
 }
 
-.react-datepicker__current-month{
+.react-datepicker__current-month {
   font-size: 1.5rem;
   line-height: 2.6rem;
   padding: 1rem;
 }
 
-.react-datepicker__month-container{
+.react-datepicker__month-container {
   width: 100%;
-  
 }
 
-.react-datepicker__week{
+.react-datepicker__week {
   display: flex;
   justify-content: space-evenly;
 }
 
-.react-datepicker__day-names{
+.react-datepicker__day-names {
   display: flex;
   justify-content: space-evenly;
   font-weight: 600;
 }
 
-.notes-city-name{
+.notes-city-name {
   font-weight: bold;
   font-size: large;
   color: rgb(209, 158, 103);
@@ -140,14 +137,23 @@ input:focus {
 }
 
 .primary:hover,
-.back:hover{
-  opacity: .8;
-  transform: scale(1.05,1.05);
+.back:hover {
+  opacity: 0.8;
+  transform: scale(1.05, 1.05);
 }
 
-@media (max-width:450px){
+@media (max-width: 450px) {
   .cta:link,
   .cta:visited {
-    padding: .3rem 1.3rem;
+    padding: 0.3rem 1.3rem;
+  }
+
+  .react-datepicker {
+    width: 300px;
+    font-size: 2rem;
+  }
+
+  .react-datepicker__current-month {
+    font-size: 2rem;
   }
 }

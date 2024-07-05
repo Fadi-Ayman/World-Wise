@@ -19,7 +19,9 @@ export function useGeolocation(defaultPosition = null) {
         setIsLoading(false);
       },
       (error) => {
-        setError(error.message);
+        setError(
+          "You Must Give Us The Permission To Access Location , And Reload "
+        );
         setIsLoading(false);
       }
     );

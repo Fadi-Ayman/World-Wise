@@ -5,17 +5,25 @@ function PageNav() {
   return (
     <nav className={styles.nav}>
       <div>
-        <Link to="/"> <img className="navImage" src="/logo.png" alt="Logo" /></Link>
+        <Link to="/">
+          <img className="navImage" src="/logo.png" alt="Logo" />
+        </Link>
       </div>
       <ul>
         <li>
-          <NavLink to="/pricing" className="ctaLink">Pricing</NavLink>
+          <NavLink to="/pricing" className="ctaLink">
+            Pricing
+          </NavLink>
         </li>
         <li>
-          <NavLink to="/product" className="ctaLink">Product</NavLink>
+          <NavLink to="/product" className="ctaLink">
+            Product
+          </NavLink>
         </li>
-        <li >
-          <NavLink to="/login" className={`cta ${styles.loginLink}`}>Login</NavLink>
+        <li>
+          <NavLink to="/login" className={`cta ${styles.loginLink}`}>
+            Login
+          </NavLink>
         </li>
       </ul>
     </nav>

@@ -8,12 +8,12 @@ export default function Product() {
       <PageNav />
       <section>
         <div className={styles.text}>
-          <h2 >
+          <h2>
             Simple pricing.
             <br />
             Just $9/month.
           </h2>
-          <p >
+          <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae vel
             labore mollitia iusto. Recusandae quos provident, laboriosam fugit
             voluptatem iste.
