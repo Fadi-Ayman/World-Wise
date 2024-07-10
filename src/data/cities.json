@@ -1,3 +1,16 @@
 {
-  "cities": []
+  "cities": [
+    {
+      "id": "a74f",
+      "cityName": "Ashmun",
+      "country": "Egypt",
+      "emoji": "🇪🇬",
+      "date": "2024-07-10T08:19:00.833Z",
+      "notes": "No Notes",
+      "position": {
+        "lat": "30.220775201798347",
+        "lng": "31.029785152059052"
+      }
+    }
+  ]
 }
