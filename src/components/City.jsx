@@ -26,7 +26,7 @@ function City() {
 
   useEffect(() => {
     getCurrentCity(id);
-  }, [id]);
+  }, [getCurrentCity, id]);
 
   if (isCurrentCityLoading) return <Spinner />;
   if (isCurrentCityError)

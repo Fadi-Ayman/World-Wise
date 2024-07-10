@@ -1,4 +1,4 @@
-import { createContext, useState, useEffect, useContext } from "react";
+import { createContext, useState, useEffect, useContext, useCallback } from "react";
 const CityContext = createContext();
 const BASE_URL = `http://localhost:8000/cities`;
 
@@ -33,7 +33,7 @@ function CityProvider({ children }) {
     getCities();
   }, []);
 
-  async function getCurrentCity(id) {
+  const getCurrentCity = useCallback(async function getCurrentCity(id) {
     setIsCurrentCityLoading(true);
     try {
       const res = await fetch(`${BASE_URL}/${id}`);
@@ -44,7 +44,7 @@ function CityProvider({ children }) {
     } finally {
       setIsCurrentCityLoading(false);
     }
-  }
+  },[])
 
   async function deleteCity(id) {
     const res = await fetch(`${BASE_URL}/${id}`, {

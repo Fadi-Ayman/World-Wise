@@ -41,7 +41,7 @@ function Map() {
     }
     lastCityRef.current = [lat, lng];
     userPosition &&
-      navigate(`form?lat=${userPosition.lat}&lng=${userPosition.lng}`);
+      navigate(`cities?lat=${userPosition.lat}&lng=${userPosition.lng}`);
   }
 
   return (

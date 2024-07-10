@@ -15,7 +15,7 @@ export default function PageNotFound() {
         <div className={styles.mouth}></div>
       </div>
 
-      <h1 className={styles.text}> Page Not Found </h1>
+      <h1 className={styles.text}> Page Not Found !</h1>
       <Link to={"/"} className={styles.btn}>
         Return to Home
       </Link>

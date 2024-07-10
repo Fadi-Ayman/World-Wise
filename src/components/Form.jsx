@@ -78,8 +78,7 @@ function Form() {
     }
 
     ReverseGeocoding();
-  }, [GEO_CODING_BASE_URL, date, lat, lng]);
-  // ☝ Didn't Put Notes As A Dependency To Avoid Unnecessary Renders , By The Way It Will Added At Sending Form
+  }, [GEO_CODING_BASE_URL, date, lat, lng, notes]);
 
   // Handling Foucus on Notes in Form
   useEffect(() => {
@@ -100,7 +99,7 @@ function Form() {
       const data = await res.json();
       setCities([...cities, data]);
 
-      navigate("/applayout/cities");
+      navigate(`/applayout/cities?lat=${lat}&lng=${lng}`);
     } catch (error) {
     } finally {
     }
