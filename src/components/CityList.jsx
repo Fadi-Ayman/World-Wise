@@ -3,6 +3,7 @@ import styles from "./CityList.module.css";
 import CityItem from "./CityItem";
 import Spinner from "./Spinner";
 import Message from "./Message";
+import NoData from "./NoData";
 
 function CityList() {
   const { cities, deleteCity, isCityiesLoading, isCitiesError } = useCities();
@@ -10,6 +11,8 @@ function CityList() {
   if (isCityiesLoading) return <Spinner />;
   if (isCitiesError)
     return <Message emoji={"😰"} message={"Error In Fetching Data"} />;
+
+  if (cities.length === 0 ) return <NoData data={'Cities'}/>
 
   return (
     <div className={styles.cityList}>

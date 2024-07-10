@@ -1,6 +1,8 @@
 import { useCities } from "../contexts/CityContext";
 import CountryItem from "./CountryItem";
 import styles from "./CountryList.module.css";
+import NoData from "./NoData";
+
 
 function CountryList() {
   const { cities } = useCities();
@@ -11,6 +13,9 @@ function CountryList() {
       return arr;
     }
   }, []);
+
+
+  if (uniqueCountries.length === 0 ) return <NoData data={'Countries'}/>
 
   return (
     <div className={styles.countryList}>
