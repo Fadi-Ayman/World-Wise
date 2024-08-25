@@ -47,7 +47,7 @@ function CityProvider({ children }) {
   },[])
 
   async function deleteCity(id) {
-    const res = await fetch(`${BASE_URL}/${id}`, {
+    await fetch(`${BASE_URL}/${id}`, {
       method: "DELETE",
     });
     setCities(
