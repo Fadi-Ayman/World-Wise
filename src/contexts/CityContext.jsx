@@ -1,6 +1,6 @@
 import { createContext, useState, useEffect, useContext, useCallback } from "react";
 const CityContext = createContext();
-export const BASE_URL = `https://world-wise-server-phi.vercel.app/cities`;
+export const BASE_URL = `https://world-wise-server-five.vercel.app/cities`;
 
 const initialPosition = {
   lat: 30.033333,
