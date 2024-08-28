@@ -6,10 +6,9 @@ import DatePicker from "react-datepicker";
 
 import styles from "./Form.module.css";
 import "react-datepicker/dist/react-datepicker.css";
-import { useCities } from "../contexts/CityContext";
+import { BASE_URL, useCities } from "../contexts/CityContext";
 import Message from "./Message";
 
-const BASE_URL = `http://localhost:8000/cities`;
 
 export function convertToEmoji(countryCode) {
   const codePoints = countryCode
